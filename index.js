@@ -19,13 +19,13 @@ async function takeArchive(archivePath) {
   try {
     const encoding = "utf-8";
     const text = await fs.promises.readFile(archivePath, encoding);
-    console.log(chalk.bgBlueBright(extractLinks(text)));
+    console.log(extractLinks(text));
   } catch (erro) {
     solveError(erro);
   }
 }
 
-takeArchive("./arquivos/index.js");
+takeArchive("./arquivos/text.md");
 
 // under const enconding utf-8 fs.readFile(archivePath, encoding,(erro, text) =>{
 // if (erro){
